@@ -7,26 +7,26 @@ import java.util.List;
 
 public class Colonel implements MilitaryRank {
     private List<Army> army;
-    private String description;
+    private String task;
 
     public Colonel() {
     }
 
-    public Colonel(List<Army> army, String description) {
+    public Colonel(List<Army> army, String task) {
         this.army = army;
-        this.description = description;
+        this.task = task;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTask() {
+        return task;
     }
 
     public void setArmy(List<Army> army) {
         this.army = army;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTask(String task) {
+        this.task = task;
     }
 
     @Override
@@ -46,6 +46,7 @@ public class Colonel implements MilitaryRank {
 
     @Override
     public void execute() {
+        System.out.println(task);
         army.forEach(Army::execute);
     }
 }
