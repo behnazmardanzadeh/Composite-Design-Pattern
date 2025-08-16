@@ -3,16 +3,16 @@ package com.algocoding.hierarchy.rank;
 import com.algocoding.hierarchy.Army;
 import com.algocoding.hierarchy.MilitaryRank;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Captain implements MilitaryRank {
-    private ArrayList<Army> army;
+    private List<Army> army;
     private String description;
 
     public Captain() {
     }
 
-    public Captain(ArrayList<Army> army, String description) {
+    public Captain(List<Army> army, String description) {
         this.army = army;
         this.description = description;
     }
@@ -21,7 +21,7 @@ public class Captain implements MilitaryRank {
         return description;
     }
 
-    public void setArmy(ArrayList<Army> army) {
+    public void setArmy(List<Army> army) {
         this.army = army;
     }
 
@@ -40,7 +40,7 @@ public class Captain implements MilitaryRank {
     }
 
     @Override
-    public ArrayList<Army> getArmy() {
+    public List<Army> getArmy() {
         return this.army;
     }
 

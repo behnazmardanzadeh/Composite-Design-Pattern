@@ -4,15 +4,16 @@ import com.algocoding.hierarchy.Army;
 import com.algocoding.hierarchy.MilitaryRank;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Sergeant implements MilitaryRank {
-    private ArrayList<Army> army;
+    private List<Army> army;
     private String description;
 
     public Sergeant() {
     }
 
-    public Sergeant(ArrayList<Army> army, String description) {
+    public Sergeant(List<Army> army, String description) {
         this.army = army;
         this.description = description;
     }
@@ -21,7 +22,7 @@ public class Sergeant implements MilitaryRank {
         return description;
     }
 
-    public void setArmy(ArrayList<Army> army) {
+    public void setArmy(List<Army> army) {
         this.army = army;
     }
 
@@ -40,12 +41,13 @@ public class Sergeant implements MilitaryRank {
     }
 
     @Override
-    public ArrayList<Army> getArmy() {
+    public List<Army> getArmy() {
         return this.army;
     }
 
     @Override
     public void execute() {
+        System.out.println(description);
         army.forEach(Army::execute);
     }
 }
